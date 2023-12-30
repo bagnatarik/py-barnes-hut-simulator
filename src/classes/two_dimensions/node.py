@@ -36,7 +36,7 @@ class Node :
     # Getter
 
     def isroot(self) -> bool :
-        return None
+        return self.parent is None
     
     def isexeternal(self) -> bool :
         return None
