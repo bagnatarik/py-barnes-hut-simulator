@@ -29,9 +29,9 @@ class Node :
             self.children = children
 
     # Setter
-        
+            
     def settheta(self, theta : float) -> None:
-        return None
+        Node.theta = theta
     
     # Getter
     
