@@ -34,15 +34,6 @@ class Node :
         return None
     
     # Getter
-
-    def isroot(self) -> bool :
-        return self.parent is None
-    
-    def isexeternal(self) -> bool :
-        return all(quadrant is None for quadrant in self.children)
-    
-    def wastooclose(self) -> bool :
-        return self.isSubdivided
     
     def getnumberofrenegades(self) -> int :
         return 0
@@ -66,6 +57,15 @@ class Node :
         return None
 
     # others methods
+
+    def isroot(self) -> bool :
+        return self.parent is None
+    
+    def isexeternal(self) -> bool :
+        return all(quadrant is None for quadrant in self.children)
+    
+    def wastooclose(self) -> bool :
+        return self.isSubdivided
 
     def reset(self, minimum : Vector2D, maximum : Vector2D) -> None :
         return None
