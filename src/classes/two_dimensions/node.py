@@ -36,25 +36,36 @@ class Node :
     # Getter
     
     def getnumberofrenegades(self) -> int :
-        return 0
+        return self.renegades
     
     def getnumberofparticles(self) -> int :
-        return 0
+        return self.numberofparticles
     
     def getcenterofmass(self) -> Vector2D :
-        return None
+        return self.centerofmass
     
-    def getminimum(self) -> int :
-        return 0
+    def getminimum(self) -> Vector2D :
+        return self.minimum
     
-    def getmaximum(self) -> int :
-        return 0
+    def getmaximum(self) -> Vector2D :
+        return self.maximumm
     
     def gettheta(self) -> float :
-        return 0
+        return Node.theta
 
     def getquadrant(self, x : float, y : float) -> Equadrant :
-        return None
+        if x <= self.center.x and y <= self.center.y :
+            return Equadrant.SW
+        elif x <= self.center.x and y >= self.center.y :
+            return Equadrant.NW
+        elif x >= self.center.x and y >= self.center.y :
+            return Equadrant.NE
+        elif x >= self.center.x and y <= self.center.y :
+            return Equadrant.SE
+        elif x > self.maximumm.x or y > self.maximumm.y or x < self.minimum.x or y < self.minimum.y :
+            raise ValueError(f'Cannot determine quadrant ! \n' + f'Particle = ({x},{y}) not in quad')
+        else:
+            raise ValueError('Cannot determine the quadrant !')
 
     # others methods
 
