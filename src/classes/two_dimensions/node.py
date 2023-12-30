@@ -42,7 +42,7 @@ class Node :
         return all(quadrant is None for quadrant in self.children)
     
     def wastooclose(self) -> bool :
-        return None
+        return self.isSubdivided
     
     def getnumberofrenegades(self) -> int :
         return 0
