@@ -4,7 +4,7 @@ We need to reproduce the N-Body problem using the Barnes-Hut algorithm.
 
 Language used : Python
 
-Library used : Pygame
+Libraries used : PySDL2, PyOpenGL
 
 ## FEATURES
 
