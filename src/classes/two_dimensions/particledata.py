@@ -6,7 +6,7 @@ class PlainOldDataState :
         self.vy = vy
 
 class PlainOldDataAuxState :
-    def __init__(self, mass : float) -> None:
+    def __init__(self, mass : float = 0) -> None:
         self.mass = mass
 
 class PlainOldDataDerivation :
